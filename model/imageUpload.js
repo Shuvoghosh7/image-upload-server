@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const imageSchema = new mongoose.Schema({
-    Imgname:{
+    imgname:{
         type:String,
         required:true
     },
@@ -14,7 +14,7 @@ const imageSchema = new mongoose.Schema({
 
 // create model
 
-const users = new mongoose.model("users",imageSchema);
+const uploadedImage = new mongoose.model("uploadedImage",imageSchema);
 
-module.exports = users;
+module.exports = uploadedImage;
 

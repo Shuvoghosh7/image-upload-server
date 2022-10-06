@@ -7,8 +7,8 @@ const mongoose = require("mongoose");
 app.use(express.json());
 app.use(cors());
 //routes
-/* const imageUploadRoute=require('./route/imageUpload.route')
- */
+const imageUploadRoute=require('./routes/imageUpload.route')
+
 
 
 app.get("/", (req, res) => {
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 });
 
 // route colling
-/* app.use("/api/v1/",imageUploadRoute,express.static("./images"))
- */
+app.use("/api/v1/",imageUploadRoute,express.static("./images"))
+
 
 module.exports = app;
